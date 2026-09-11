@@ -34,16 +34,84 @@
     </header>
 
     <main>
-        <!-- Hero billeder med pil så man kan trykke videre -->
+        <!-- HELE OMRÅDET MED HERO BILLEDERNE -->
+        <section class="hero">
+            
+            <!-- Det første billede -->
+            <!-- id bruges som destination for pilenes links -->
+            <div class="slide" id="slide1">
 
-         <section class="hero-billeder" aria-label="produktbilleder">
-                <img src="images/grå-forfra.png" alt="Gråt armbånd forfra">
+                <!-- Selve produktbilledet -->
+                <img src="images/grå-forfra.png" alt="gråt ur forfra">
+
+                <!-- Link til det forrige billede -->
+                <!-- Fra slide1 går venstre pil til det sidste slide -->
+                <a class="venstre-pil" href="#slide5">←</a>
+
+                <!-- link til næste billede -->
+                <a class="hoejre-pil" href="#slide2">→</a>
+
             </div>
-         </section>   
 
+            <!-- Det andet billede -->
+            <div class="slide" id="slide2">
 
+                <!-- produktbillede -->
+                <img src="images/grå-siden.png" alt="gråt ur fra siden">
 
-        <!-- produktbeskrivelsen med navn, varenummer, pris, trustpilot, størrelser, farver, læg i kurv knap og leveringstid -->
+                <!-- link til forrige billede -->
+                 <a class="venstre-pil" href="#slide1">←</a>
+
+                 <!-- link til næste billede -->
+                 <a class="hoejre-pil" href="#slide3">→</a>
+
+            </div>
+
+             <!-- Det tredje billede -->
+            <div class="slide" id="slide3">
+
+                <!-- produktbillede -->
+                <img src="images/grå-bagside.png" alt="gråt urs bagside">
+
+                <!-- link til forrige billede -->
+                 <a class="venstre-pil" href="#slide2">←</a>
+
+                 <!-- link til næste billede -->
+                 <a class="hoejre-pil" href="#slide4">→</a>
+
+            </div>
+
+              <!-- Det fjerde billede -->
+            <div class="slide" id="slide4">
+
+                <!-- produktbillede -->
+                <img src="images/grå-bagfra.png" alt="gråt ur bagfra">
+
+                <!-- link til forrige billede -->
+                 <a class="venstre-pil" href="#slide3">←</a>
+
+                 <!-- link til næste billede -->
+                 <a class="hoejre-pil" href="#slide5">→</a>
+
+            </div>
+
+                 <!-- Det femte billede -->
+            <div class="slide" id="slide5">
+
+                <!-- produktbillede -->
+                <img src="images/grå-sensor.png" alt="gråt urs sensor">
+
+                <!-- link til forrige billede -->
+                 <a class="venstre-pil" href="#slide4">←</a>
+
+                 <!-- link til næste billede -->
+                 <a class="hoejre-pil" href="#slide1">→</a>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUKTBESKRIVELSE med navn, varenummer, pris, trustpilot, størrelser, farver, læg i kurv knap og leveringstid -->
          <section class="produktbeskrivelse">
             <!-- Produktnavn -->
             <h1>Produktnavn</h1>
@@ -70,7 +138,7 @@
             <h6>Leveringstid er 1-2 uger.</h6>
          </section>
 
-        <!-- De fire billeder fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
+        <!-- DE FIRE BILLEDER fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
         <section class="billeder">
             
             <!-- Her ligger det første billeder der viser "10 dages batteri" -->

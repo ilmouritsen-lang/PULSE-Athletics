@@ -48,11 +48,66 @@ header {
 }
 
 /* MAIN */
-
 /* HEROSEKTION I TOPPEN */
 
+/* Hele området, hvor billederne bliver vist */
+.hero {
+    /* gør at billederne ligger ved siden af hinanden */
+    display: flex;
+    /* bestemmer bredet på billederne */
+    width: 800px;
+   /* Forhindrer heroen i at blive bredere end skærmen */
+    max-width: 100%;
+    /* Centrerer hele hero-sektionen vandret */
+    margin: 0 auto;
+    /* skjuler de biller der ligger rundt om så der kun bliver vist en ad gangen */
+    overflow: hidden;
+    /* gør overgangen når man trykker på pilene mere flydende */
+    scroll-behavior: smooth;
+}
+
+/* styling af billederne og pilene */
+.slide {
+    /* gør at man kan placere pilene oven på billederne */
+    position: relative;
+    /* gør at billederne fylder min hele "hero" ud */
+    min-width: 100%;
+}
+
+/* styler billederne inden i slide */
+.slide img {
+    /* gør de går helt ned til bunden */
+    display: block;
+    width: 100%;
+    height: 600px;
+    /* gør billeder ikke strækker og produktet stadig er med */
+    object-fit: contain;
+}
+
+.venstre-pil,
+.hoejre-pil {
+    /* gør de bliver placeret oven på billederne */
+    position: absolute;
+    /* billerne er i midten af billederne */
+    top: 50%;
+    /* farve på pilene */
+    color: black;
+    /* fjerne linkstreg */
+    text-decoration: none;
+    /* størrelsen */
+    font-size: 30px;
+}
+
+.venstre-pil {
+    /* placere pilen x antal px fra venstre */
+    left: 60px;
+}
+
+.hoejre-pil {
+    right: 60px;
+}
+
 /* PRODUKTBESKRIVELSEN */
-.produktbeskrivelse h1 
 
 /* FOOTER */
 
