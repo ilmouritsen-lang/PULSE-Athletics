@@ -19,3 +19,20 @@ sort-siden-hq.png: edit target sort-siden.png. Strap color: black. Preserve the 
 sort-bagfra-hq.png: edit target sort-bagfra.png. Strap color: black. Preserve the exact angle shown in sort-bagfra.png.
 sort-bagside-hq.png: edit target sort-bagside.png. Strap color: black. Preserve the exact angle shown in sort-bagside.png.
 sort-sensor-hq.png: edit target sort-sensor.png. Strap color: black. Preserve the exact angle shown in sort-sensor.png.
+
+Final filenames: all 15 enhanced images replaced the original image files at the user’s request. The -hq copies were renamed to the original filenames. Earlier preservation notes describe the prior state.
+graa-forfra-hq.png -> grå-forfra.png
+graa-siden-hq.png -> grå-siden.png
+graa-bagfra-hq.png -> grå-bagfra.png
+graa-bagside-hq.png -> grå-bagside.png
+graa-sensor-hq.png -> grå-sensor.png
+groen-forfra-hq.png -> grøn-forfra.png
+groen-siden-hq.png -> grøn-siden.png
+groen-bagfra-hq.png -> grøn-bagfra.png
+groen-bagside-hq.png -> grøn-bagside.png
+groen-sensor-hq.png -> grøn-sensor.png
+sort-forfra-hq.png -> sort-forfra.png
+sort-siden-hq.png -> sort-siden.png
+sort-bagfra-hq.png -> sort-bagfra.png
+sort-bagside-hq.png -> sort-bagside.png
+sort-sensor-hq.png -> sort-sensor.png
