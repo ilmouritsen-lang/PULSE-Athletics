@@ -9,50 +9,128 @@
 
 <body>
     <header>
-        <!-- Logo -->
-    
+        <!-- Logo til header der skal være i venstre side -->
+         <article class="pulse-logo-øverst">
+            <img src="images/" alt="pulse logo">
+        </article>
+
         <!-- Søg, profil, kurv, menu -->
-        
+        <section class="ikoner-øverst">
+            <!-- Søge ikon -->
+            <img src="images/" alt="søge ikon">
+
+            <!-- profil ikon -->
+            <img src="images/" alt="profil ikon">
+
+            <!-- indkøbskurv ikon -->
+            <img src="" alt="kruv ikon">
+
+            <!-- burgermenu ikon -->
+            <img src="" alt="hambruger ikon">
+
+        </section>
     </header>
 
     <main>
-        <!-- produktbeskrivelsen -->
+        <!-- Hero billeder med pil så man kan trykke videre -->
+         <section class="hero-billede">
+            <img src="images/grå-forfra.png" alt="Gråt armbånd forfra">
+         </section>   
+
+
+
+        <!-- produktbeskrivelsen med navn, varenummer, pris, trustpilot, størrelser, farver, læg i kurv knap og leveringstid -->
          <section class="produktbeskrivelse">
-        <!-- Hero billede -->
-        <!-- Produktnavn -->
-        <!-- varenummer -->
-        <!-- pris -->
-        <!-- trustpiolet -->
-        <!-- størrelser -->
-        <!-- farver -->
-        <!-- læg i kurv knap -->
-        <!-- leveringstid -->
+            <!-- Produktnavn -->
+            <h1>Produktnavn</h1>
+
+            <!-- varenummer -->
+            <h6>Varenummer: 00010034567</h6>
+
+            <!-- pris -->
+            <h2>1.299,00 kr</h2>
+
+            <!-- trustpilot -->
+            <img src="images/trustpilot.png" alt="trustpilot stjerner">
+
+            <!-- størrelser -->
+            <h4>Størrelser</h4>
+
+            <!-- farver -->
+            <h4>Farver</h4>
+
+            <!-- læg i kurv knap -->
+             <button type="button" class="kurv-knap">Læg i kurv</button>
+
+            <!-- leveringstid -->
+            <h6>Leveringstid er 1-2 uger.</h6>
          </section>
 
-        <!-- Billede 1 fra chat med tekst oven på -->
+        <!-- De fire billeder fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
         <section class="billeder">
             
-            <article class="billede1">
-            </article>
+            <!-- Her ligger det første billeder der viser "10 dages batteri" -->
+            <div class="batteri">
+                <!-- Her er selve billedet sat ind -->
+                <img src="images/batteri.png" alt="mand med armbånd med 10 dages batteri">
 
-            <article class="billede2">
-            </article>
+                <!-- Her er "tekst-knappen"-->
+                <button type="button" class="batteri-billedetekst">
+                    10 dages batteri
+                </button>
+            </div>
 
-            <article class="billede3">
-            </article>
 
-            <article class="billede4">
-            </article>
+            <!-- Her ligger det andet billede af "søvn" -->
+            <div class="søvn">
+                <!-- Her ligget selve billedet -->
+                <img src="images/søvn.png" alt="mand der sover med armbånd">
+
+                <!-- Her er "tekst-knappen" -->
+                <button type="button" class="søvn-billedetekst">
+                    Søvn
+                </button>
+            </div>
+
+
+            <!-- Her ligger det tredje billede af "træning" -->
+            <div class="træning">
+                <!-- Her ligget selve billedet -->
+                <img src="images/træning.png" alt="mand der løber med armbånd på">
+
+            <!-- Her er "tekst-knappen" -->
+             <button type="button" class="træning-billedetekst">
+                Træning
+             </button>
+             </div>
+
+
+             <!-- Her ligger det fjerde billede af "sundhed" -->
+            <div class="sundhed">
+                <!-- Her ligget selve billedet -->
+                <img src="images/sundhed.png" alt="mand der mediterer">
+
+                <!-- Her er "tekst-knappen" -->
+                 <button type="button" class="sundhed-billedetekst">
+                    Sundhed
+                 </button>
+            </div>
 
         </section>
-
     </main>
 
     <footer>
         <!-- Kundeservice -->
+        <button type="button" class="Kundeservice-knap">Kundeservice</button>
+
         <!-- Om os -->
+        <button type="button" class="om-os-knap">Om os</button>
+
         <!-- Retur / reklamation -->
+         <button type="button" class="retur-reklamation-knap">Retur/reklamation</button>
+
         <!-- Sociale medier -->
+        <div class=""></div>
     </footer>
 
 </body>

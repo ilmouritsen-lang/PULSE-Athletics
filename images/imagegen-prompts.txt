@@ -1,0 +1,21 @@
+Tool: built-in image_gen. Original images preserved. Output: graa-forfra-hq.png, groen-forfra-hq.png, sort-forfra-hq.png.
+
+Prompt used separately for gray, dark olive green, and black, with the matching original forfra image as edit target:
+Use case: precise-object-edit. Edit target: attached [color] fitness wristband product photo. Improve image quality and resolution to a crisp premium ecommerce photograph, approximately 1536 pixels wide. Preserve EXACT wristband design, [color] woven fabric color, black rounded rectangular sensor module, proportions, perspective, position, framing, white background and subtle ground shadow. Resolve fabric weave cleanly and reduce blur and jagged edges without oversharpening. No new features, no text, no logos. Faithful quality restoration, not redesign.
+
+
+Additional angles: built-in image_gen; original images preserved.
+Use case: precise-object-edit. Restore the attached low-resolution fitness wristband product photograph as a crisp, high-resolution ecommerce image, around 1400 pixels on its longest edge. Preserve the EXACT original viewing angle, framing, silhouette, proportions, strap thickness, orientation, hardware, clasp, sensor arrangement and color. Keep the white background and subtle contact shadow. Improve fabric texture clarity, smooth jagged edges and remove blur. Do not change product design, add features, text or logos, or rotate the product. Sensor images must retain every original contact and optical element in its original position. The input is the edit target, not a loose design reference.
+
+graa-siden-hq.png: edit target grå-siden.png. Strap color: neutral gray. Preserve the exact angle shown in grå-siden.png.
+graa-bagfra-hq.png: edit target grå-bagfra.png. Strap color: neutral gray. Preserve the exact angle shown in grå-bagfra.png.
+graa-bagside-hq.png: edit target grå-bagside.png. Strap color: neutral gray. Preserve the exact angle shown in grå-bagside.png.
+graa-sensor-hq.png: edit target grå-sensor.png. Strap color: neutral gray. Preserve the exact angle shown in grå-sensor.png.
+groen-siden-hq.png: edit target grøn-siden.png. Strap color: dark olive green. Preserve the exact angle shown in grøn-siden.png.
+groen-bagfra-hq.png: edit target grøn-bagfra.png. Strap color: dark olive green. Preserve the exact angle shown in grøn-bagfra.png.
+groen-bagside-hq.png: edit target grøn-bagside.png. Strap color: dark olive green. Preserve the exact angle shown in grøn-bagside.png.
+groen-sensor-hq.png: edit target grøn-sensor.png. Strap color: dark olive green. Preserve the exact angle shown in grøn-sensor.png.
+sort-siden-hq.png: edit target sort-siden.png. Strap color: black. Preserve the exact angle shown in sort-siden.png.
+sort-bagfra-hq.png: edit target sort-bagfra.png. Strap color: black. Preserve the exact angle shown in sort-bagfra.png.
+sort-bagside-hq.png: edit target sort-bagside.png. Strap color: black. Preserve the exact angle shown in sort-bagside.png.
+sort-sensor-hq.png: edit target sort-sensor.png. Strap color: black. Preserve the exact angle shown in sort-sensor.png.
