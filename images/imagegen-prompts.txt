@@ -1,0 +1,2 @@
+
+Final transparency update: all 15 wristband PNGs now have verified RGBA transparency. Imagegen background-removal results were rejected because they lacked alpha. Backgrounds were removed locally with Python/Pillow; original project filenames and dimensions retained.

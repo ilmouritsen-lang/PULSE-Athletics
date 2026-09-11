@@ -109,5 +109,12 @@ header {
 
 /* PRODUKTBESKRIVELSEN */
 
+/* BILLEDER AF MÆNDENE */
+
+.billeder {
+    width: 100%;
+    height: 400px;
+}
+
 /* FOOTER */
 
