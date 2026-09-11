@@ -1,0 +1,58 @@
+
+:root {
+}
+
+body {
+    background-color: rgb(38, 37, 37);
+}
+
+/*HEADER */
+header {
+    /* placerer headerens dirkete "børn" — logo og ikonsektion — ved siden af hinanden */
+    display: flex;
+    /* lægger den ledige plads mellem dem, så logoet står til venstre og ikonerne til højre. */
+    justify-content: space-between;
+    /* - centrerer dem lodret, så de flugter på midten, selvom logoet er højere end ikonerne. */
+    align-items: center;
+
+    /* får headeren til at følge med, når man scroller */
+    position: sticky;
+    /* får den til at blive siddende i toppen */
+    top: 0;
+    /* gør så den ligger foran sidens indhold */
+    z-index: 10;
+}
+
+/* Gør at logo er i en bestemt størrelse */
+.pulse-logo-oeverst img{
+    width: 8rem;
+    height: auto;
+}
+
+/* Gør at ikonerne er i en bestemt størrelse */
+.ikoner-oeverst img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* laver en boks omkring ikonerne */
+.ikoner-oeverst {
+   background-color: lightblue; 
+   padding: 0.2rem;
+   border-radius: 2rem;
+}
+
+/* Gør at søgeikonet er lidt væk fra de andre ikoner */
+.soegeikon {
+    margin-right: 4rem;
+}
+
+/* MAIN */
+
+/* HEROSEKTION I TOPPEN */
+
+/* PRODUKTBESKRIVELSEN */
+.produktbeskrivelse h1 
+
+/* FOOTER */
+
