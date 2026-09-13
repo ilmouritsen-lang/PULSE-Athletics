@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 
-/*HEADER */
+/*HEADER (lave hover)*/ 
 header {
     /* placerer headerens dirkete "børn" — logo og ikonsektion — ved siden af hinanden */
     display: flex;
@@ -298,7 +298,7 @@ header {
     margin-top: 100px;
 }
 
-/* FOOTER */
+/* FOOTER (hover) */
 footer {
     margin-top: 30px;
     background-color: black;
