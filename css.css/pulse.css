@@ -115,9 +115,14 @@ header {
 
 /* PRODUKTBESKRIVELSEN */
 
-/* her skal vi lige gøre så teksten ikke ligger sig helt op ad venstre side */
+/* Samlet fra to blokke, så produktbeskrivelsens placering og afstande står ét sted. */
 .produktbeskrivelse {
+    /* Luft til venstre kant */
     margin-left: 30px;
+    /* Grupperne står under hinanden med 30px mellemrum */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* ALT TEKST I PRODUKTBESKRIVELSEN ER SAMLET HER UNDER */
@@ -165,17 +170,16 @@ header {
 
 /* her er de tre cirkler med farve mulighederne i */
 
-    /* overordnet afstand og mellem cirklerne */
+    /* overordnet afstand mellem cirklerne */
     .farve-cirkler {
+        /* flex placerer cirklerne fra starten af rækken */
         display: flex;
-        justify-content: left;
-        align-items: left;
+        /* centrerer dem lodret i forhold til hinanden */
+        align-items: center;
         gap: 4px;
 
         /* gør musen til en pointer når den er over cirklerne */
         cursor: pointer;
-        /* gør at hover tager 2 sekunder */
-        transition: 2s;
     }
 
     /* skaber en hover effekt over alle cirklerne */
@@ -186,32 +190,31 @@ header {
         scale: 1.05;
     }
 
-    /* hver cirkel skal gøre det samme ud over at have forskellige farver */
-    .cirkel-sort {
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid black;
-        background-color: rgb(37, 37, 37);
-        /* gør den rund */
-        border-radius: 50%;
-    }
-
-    .cirkel-blå {
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid rgb(1, 1, 90);
-        background-color: navy;
-        /* gør den rund */
-        border-radius: 50%;
-    }
-
+    /* Fælles størrelse og runding står kun én gang, fordi alle tre cirkler bruger det samme. */
+    .cirkel-sort,
+    .cirkel-blå,
     .cirkel-grøn {
         width: 2rem;
         height: 2rem;
+        border-radius: 50%;
+
+        transition: scale 0.2s;
+    }
+
+    /* Kun kantfarve og baggrund er forskellige fra cirkel til cirkel. */
+    .cirkel-sort {
+        border: 2px solid black;
+        background-color: rgb(37, 37, 37);
+    }
+
+    .cirkel-blå {
+        border: 2px solid rgb(1, 1, 90);
+        background-color: navy;
+    }
+
+    .cirkel-grøn {
         border: 2px solid rgb(1, 65, 1);
         background-color:darkgreen;
-        /* gør den rund */
-        border-radius: 50%;
     }
 
 /* her er køb-knappen */
@@ -224,7 +227,7 @@ header {
     color: white;
 
     cursor: pointer;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .kurv-knap:hover {
@@ -232,20 +235,12 @@ header {
 }
 
 /* HER LAVER VI GRUPPERINGERNE TYDELIGE */
-/* større afstand mellem grupperne */
-    .produktbeskrivelse {
+    .produktgruppe {
         /* gør man kan bestemme position */
         display: flex;
-        /* gør de kommer til at stå ovenpå hinanden */
+        /* gør de kommer til at stå over hinanden */
         flex-direction: column;
-        /* bestemmer mellemrum størrelsen */
-        gap: 30px;
-    }
-
-/* lille afstand inden i gruppeperingerne */
-    .produktgruppe {
-        display: flex;
-        flex-direction: column;
+        /* afstand */
         gap: 6px;
     }
 
@@ -259,12 +254,9 @@ header {
 
 /* BILLEDER AF MÆNDENE */
 .billeder {
-    width: 100%;
-    margin: 0;
     display: flex;
     /* Lægger billederne direkte under hinanden uden mellemrum */
     flex-direction: column;
-    gap: 0;
 }
 
 .billeder img {
@@ -307,25 +299,43 @@ header {
 }
 
 /* FOOTER */
+footer {
+    margin-top: 30px;
+    background-color: black;
+
+    /* Luft på alle fire sider inde i footeren */
+    padding: 40px;
+
+    /* kanpper og logoer ved siden af hinanden */
+    display: flex;
+    /* knapper til venstre og logo til højre */
+    justify-content: space-between;
+    /* centrer de to grupper */
+    align-items: center;
+}
+
 .footer-knapper {
     width: 30rem;
+    max-width: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    margin: 20px;
+    align-items: flex-start;
+
     gap: 20px; 
 }
 
+/* LOGOER TIL SOCIALE MEDIER */
 .sociale-medier {
     display: flex;
-    justify-content: right;
-    align-items: right;
+    /* Centrerer logoerne lodret i rækken */
+    align-items: center;
     gap: 20px; 
 }
 
 .sociale-medier img {
+    /* fjerner den ekstra plads under billeder */
+    display: block;
     width: 6rem;
     height: 6rem;
 }
