@@ -1,9 +1,15 @@
 
 :root {
+    --tekstfarve: black;
+    --kæmpe-overskrift: 40px;
+    --stor-overskrift: 35px;
+    --lille-overskrift: 28px;
+    --rubrikker: 12px;
 }
 
 body {
-    background-color: rgb(38, 37, 37);
+    background-color: rgb(241, 236, 236);
+    margin: 0;
 }
 
 /*HEADER */
@@ -56,7 +62,7 @@ header {
     display: flex;
     /* bestemmer bredet på billederne */
     width: 800px;
-   /* Forhindrer heroen i at blive bredere end skærmen */
+    /* Forhindrer heroen i at blive bredere end skærmen */
     max-width: 100%;
     /* Centrerer hele hero-sektionen vandret */
     margin: 0 auto;
@@ -109,12 +115,217 @@ header {
 
 /* PRODUKTBESKRIVELSEN */
 
-/* BILLEDER AF MÆNDENE */
+/* her skal vi lige gøre så teksten ikke ligger sig helt op ad venstre side */
+.produktbeskrivelse {
+    margin-left: 30px;
+}
 
+/* ALT TEKST I PRODUKTBESKRIVELSEN ER SAMLET HER UNDER */
+.produktbeskrivelse h1 {
+    color: var(--tekstfarve);
+    font-size: var(--kæmpe-overskrift);
+}
+
+.produktbeskrivelse h2 {
+    color: var(--tekstfarve);
+    font-size: var(--stor-overskrift);
+}
+
+.produktbeskrivelse h4 {
+    color: var(--tekstfarve);
+    font-size: var(--lille-overskrift);
+}
+
+.produktbeskrivelse h6 {
+    color: var(--tekstfarve);
+    font-size: var(--rubrikker);
+}
+
+.produktbeskrivelse img {
+    width: 10rem;
+    height: auto;
+}
+
+/* her er boksen til størrelser */
+.boks-one-size {
+    width: 6rem;
+    height: 2rem;
+    /* kant rundt om knappen */
+    border: 2px solid black;
+    color: black;
+    font-size: var(--rubrikker);
+
+    /* gør man kan centere i de to næste */
+    display: flex;
+    /* centerer vandret */
+    justify-content: center;
+    /* centerer lodret */
+    align-items: center;
+}
+
+/* her er de tre cirkler med farve mulighederne i */
+
+    /* overordnet afstand og mellem cirklerne */
+    .farve-cirkler {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        gap: 4px;
+
+        /* gør musen til en pointer når den er over cirklerne */
+        cursor: pointer;
+        /* gør at hover tager 2 sekunder */
+        transition: 2s;
+    }
+
+    /* skaber en hover effekt over alle cirklerne */
+    .cirkel-sort:hover,
+    .cirkel-blå:hover,
+    .cirkel-grøn:hover {
+        /* cirklerne er normalt 1 og når de så hover til 1.05 bliver de lidt større */
+        scale: 1.05;
+    }
+
+    /* hver cirkel skal gøre det samme ud over at have forskellige farver */
+    .cirkel-sort {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid black;
+        background-color: rgb(37, 37, 37);
+        /* gør den rund */
+        border-radius: 50%;
+    }
+
+    .cirkel-blå {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid rgb(1, 1, 90);
+        background-color: navy;
+        /* gør den rund */
+        border-radius: 50%;
+    }
+
+    .cirkel-grøn {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid rgb(1, 65, 1);
+        background-color:darkgreen;
+        /* gør den rund */
+        border-radius: 50%;
+    }
+
+/* her er køb-knappen */
+.kurv-knap {
+    width: 10rem;
+    height: 3rem;
+    background-color: navy;
+    border: 2px solid black;
+    font-size: var(--rubrikker);
+    color: white;
+
+    cursor: pointer;
+    transition: 1s;
+}
+
+.kurv-knap:hover {
+    scale: 1.02;
+}
+
+/* HER LAVER VI GRUPPERINGERNE TYDELIGE */
+/* større afstand mellem grupperne */
+    .produktbeskrivelse {
+        /* gør man kan bestemme position */
+        display: flex;
+        /* gør de kommer til at stå ovenpå hinanden */
+        flex-direction: column;
+        /* bestemmer mellemrum størrelsen */
+        gap: 30px;
+    }
+
+/* lille afstand inden i gruppeperingerne */
+    .produktgruppe {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+/* Vi mangler at fjerne tekstens indbygget afstand */
+    .produktbeskrivelse h1,
+    .produktbeskrivelse h2,
+    .produktbeskrivelse h4,
+    .produktbeskrivelse h6 {
+        margin: 0;
+    }
+
+/* BILLEDER AF MÆNDENE */
 .billeder {
     width: 100%;
-    height: 400px;
+    margin: 0;
+    display: flex;
+    /* Lægger billederne direkte under hinanden uden mellemrum */
+    flex-direction: column;
+    gap: 0;
+}
+
+.billeder img {
+    width: 100%;
+    height: auto;
+}
+
+.billeder > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.billeder button {
+    /* placerer teksten ovenpå billedet */
+    position: absolute;
+    /* bestemmer afstand til venstreside */
+    left: 30px;
+
+    background: transparent;
+    border: none;
+    font-size: 100px;
+    color: white;
+
+    /* gør at musen bliver til en trykmus */
+    cursor: pointer;
+    /* gør hover effekten tager x antal sekunder */
+    transition: 0.2s;
+}
+
+/* her laver vi hover effekt */
+.billeder button:hover {
+    /* 1 er den størrelse den er nu så 1.05 gør den bliver større når cursoren er på */
+    scale: 1.05;
+}
+
+/* der skal være mellemrum over det første billede */
+.batteri {
+    margin-top: 100px;
 }
 
 /* FOOTER */
+.footer-knapper {
+    width: 30rem;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin: 20px;
+    gap: 20px; 
+}
+
+.sociale-medier {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    gap: 20px; 
+}
+
+.sociale-medier img {
+    width: 6rem;
+    height: 6rem;
+}

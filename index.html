@@ -113,29 +113,54 @@
 
         <!-- PRODUKTBESKRIVELSE med navn, varenummer, pris, trustpilot, størrelser, farver, læg i kurv knap og leveringstid -->
          <section class="produktbeskrivelse">
-            <!-- Produktnavn -->
-            <h1>Produktnavn</h1>
 
-            <!-- varenummer -->
-            <h6>Varenummer: 00010034567</h6>
+            <!-- laver en produktgruppe til hver gruppering, fordi vi så kan bestemme afstanden for hver gruppe -->
+            
+            <!-- navn - gruppe -->
+            <div class="produktgruppe">
+                <!-- Produktnavn -->
+                <h1>Produktnavn</h1>
+                <!-- varenummer -->
+                <h6>Varenummer: 00010034567</h6>
+            </div>
+        
+            <!-- pris - gruppe -->
+             <div class="produktgruppe">
+                <!-- pris -->
+                <h2>1.299,00 kr</h2>
+                <!-- trustpilot -->
+                <img src="images/trustpilot.png" alt="trustpilot stjerner">
+             </div>
+            
+            <!-- størrelse - gruppe -->
+             <div class="produktgruppe"> 
+                <!-- størrelser -->
+                <h4>Størrelser</h4>
+                <!-- boksen hvor der står one size -->
+                <div class="boks-one-size">One size</div>
+             </div>
 
-            <!-- pris -->
-            <h2>1.299,00 kr</h2>
+            <!-- farve - gruppe -->
+             <div class="produktgruppe">
+                <!-- farver -->
+                <h4>Farver</h4>
 
-            <!-- trustpilot -->
-            <img src="images/trustpilot.png" alt="trustpilot stjerner">
+                <!-- her laver vi html for de tre farvet cirkler, der skal blot være en overordnet class og en class der difinere hver cirkel -->
+                <div class="farve-cirkler">
+                    <div class="cirkel-sort"></div>
+                    <div class="cirkel-blå"></div>
+                    <div class="cirkel-grøn"></div>
+                </div>
+             </div>
 
-            <!-- størrelser -->
-            <h4>Størrelser</h4>
+            <!-- købe knap - gruppe -->
+             <div class="produktgruppe">
+                <!-- læg i kurv knap -->
+                <button type="button" class="kurv-knap">Læg i kurv</button>
+                <!-- leveringstid -->
+                <h6>Leveringstid er 1-2 uger.</h6>
+             </div>
 
-            <!-- farver -->
-            <h4>Farver</h4>
-
-            <!-- læg i kurv knap -->
-             <button type="button" class="kurv-knap">Læg i kurv</button>
-
-            <!-- leveringstid -->
-            <h6>Leveringstid er 1-2 uger.</h6>
          </section>
 
         <!-- DE FIRE BILLEDER fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
@@ -143,7 +168,7 @@
             
             <!-- Her ligger det første billeder der viser "10 dages batteri" -->
             <div class="batteri">
-                <!-- Her er selve billedet sat ind -->
+                <!-- Her er selve billedet sat ind -->c
                 <img src="images/batteri.png" alt="mand med armbånd med 10 dages batteri">
 
                 <!-- Her er "tekst-knappen"-->
@@ -192,17 +217,35 @@
     </main>
 
     <footer>
-        <!-- Kundeservice -->
-        <button type="button" class="Kundeservice-knap">Kundeservice</button>
 
-        <!-- Om os -->
-        <button type="button" class="om-os-knap">Om os</button>
+        <!-- her er de tre knapper i en gruppe -->
+        <div class="footer-knapper">
+            <!-- Kundeservice -->
+            <button type="button" class="Kundeservice-knap">Kundeservice</button>
 
-        <!-- Retur / reklamation -->
-         <button type="button" class="retur-reklamation-knap">Retur/reklamation</button>
+            <!-- Om os -->
+            <button type="button" class="om-os-knap">Om os</button>
 
-        <!-- Sociale medier -->
-        <div class=""></div>
+            <!-- Retur / reklamation -->
+            <button type="button" class="retur-reklamation-knap">Retur/reklamation</button>
+
+        </div>
+
+        <!-- her er knapperne til Sociale medier -->
+        <div class="sociale-medier">
+            <button type="button" class="instagram">
+                <img src="images/instagram.png" alt="instagram knap">
+            </button>
+        
+            <button type="button" class="facebook">
+                <img src="images/facebook.png" alt="facebook knap">
+            </button>
+
+            <button type="button" class="linkedin">
+                <img src="images/linkedin.png" alt="linkedin knap">
+            </button>
+        </div>
+
     </footer>
 
 </body>
