@@ -100,6 +100,12 @@ header {
 /* HERO SEKTIONEN */
 
 /* FÆLLES STYLING AF BILLEDERNE */
+
+.hero-billede {
+    /* så vi kan placerer knappen ovenpå billedet */
+    position: relative;
+}
+
 .hero-billede img {
     /* breden er 100% */
     width: 100%;
@@ -120,6 +126,33 @@ header {
     display: none;
 }
 
+.køb-nu-knap {
+    /* placerer knappen ovenpå billedet */
+    position: absolute;
+    /* centrerer knappen præcist omkring placeringen. */
+    transform: translate(-50%, -50%);
+
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+
+    font-family: var(--font-thin);
+    font-size: var(--lille-overskrift);
+    color: white;
+
+    left: 50%;
+    top: 88%;
+}
+
+.køb-nu-knap:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
 /* COMPUTERVERSION */
 /* Glæder fra 700px og op efter */
 @media only screen and (min-width: 700px) {
@@ -134,8 +167,16 @@ header {
         display: block;
     }
 
-}
+    .køb-nu-knap {
+        left: 22.4%;
+        top: 56.5%;
 
+        /* hjælp fra chat til hvad målene er for at knappen sidder rigtigt */
+        width: clamp(160px, 16.67vw, 320px);
+        height: clamp(48px, 4.27vw, 82px);
+        font-size: clamp(16px, 1.875vw, 36px);
+    }
+}
 
 /* BILLEDER AF MÆNDENE */
 
@@ -535,6 +576,13 @@ footer {
 .linkedin:hover {
     scale: 1.02;
     cursor: pointer;
+}
+
+/* fordi der er en boks i baggrunden fordi det er en knap */
+.sociale-medier button {
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 /* FOOTER - MOBIL */
