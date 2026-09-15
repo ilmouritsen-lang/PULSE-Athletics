@@ -14,12 +14,12 @@
     --tekstfarve: white;
     --kæmpe-overskrift: 40px;
     --stor-overskrift: 35px;
-    --lille-overskrift: 20px;
+    --lille-overskrift: 18px;
     --rubrikker: 12px;
 }
 
 body {
-    background-color: rgb(54, 53, 53);
+    background-color: rgb(12, 30, 85);
     margin: 0;
 }
 
@@ -133,6 +133,7 @@ header {
     .hero-billede .hero-computer {
         display: block;
     }
+
 }
 
 
@@ -306,7 +307,7 @@ header {
     /* billerne er i midten af billederne */
     top: 50%;
     /* farve på pilene */
-    color: black;
+    color: white;
     /* fjerne linkstreg */
     text-decoration: none;
     /* størrelsen */
@@ -420,17 +421,17 @@ header {
 
     /* Kun kantfarve og baggrund er forskellige fra cirkel til cirkel. */
     .cirkel-sort {
-        border: 2px solid black;
-        background-color: rgb(37, 37, 37);
+        border: 2px solid white;
+        background-color: black;
     }
 
     .cirkel-blå {
-        border: 2px solid rgb(1, 1, 90);
+        border: 2px solid white;
         background-color: navy;
     }
 
     .cirkel-grøn {
-        border: 2px solid rgb(1, 65, 1);
+        border: 2px solid white;
         background-color:darkgreen;
     }
 
@@ -438,8 +439,8 @@ header {
 .kurv-knap {
     width: 160px;
     height: 48px;
-    background-color: navy;
-    border: none;
+    background-color: rgb(1, 1, 93);
+    border: 2px solid white;
     font-size: var(--rubrikker);
     color: white;
 
@@ -472,7 +473,7 @@ header {
 /* FOOTER */
 footer {
     margin-top: 30px;
-    background-color: black;
+    border-top: 2px solid white;
 
     /* Luft på alle fire sider inde i footeren */
     padding: 40px;
@@ -486,14 +487,25 @@ footer {
 }
 
 .footer-knapper {
-    width: 480px;
-    max-width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    gap: 20px; 
+    gap: 20px;
+}
+
+.kundeservice-knap,
+.om-os-knap,
+.retur-reklamation-knap {
+    width: 200px;
+    height: 50px;
+
+    background-color: transparent;
+    border: 2px solid white;
+
+    font-family: var(--font-thin);
+    font-size: var(--lille-overskrift);
+    color: white;
 }
 
 .kundeservice-knap:hover,
