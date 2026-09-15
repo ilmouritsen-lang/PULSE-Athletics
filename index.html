@@ -3,6 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Den sikrer, at media queries måler mobilskærmen korrekt. 
+     Under 700px  → hero.png 
+     700px og op  → hero-desktop.png -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>PULSE Athletics</title>
     <link rel="stylesheet" href="css.css/pulse.css">
 </head>
@@ -10,7 +16,7 @@
 <body>
     <header>
         <!-- Logo til header der skal være i venstre side -->
-         <article class="pulse-logo-oeverst">
+        <article class="pulse-logo-oeverst">
             <!-- Har bare sat et random logo ind her (skal ændres) -->
             <img src="images/logo.png" alt="pulse logo">
         </article>
@@ -34,8 +40,80 @@
     </header>
 
     <main>
-        <!-- HELE OMRÅDET MED HERO BILLEDERNE -->
-        <section class="hero">
+
+        <!-- HER ER BILLEDERNE AF ARMBÅNDET -->
+        <section class="hero-billede">
+
+            <!-- billede skal vises på mobil -->
+            <img class="hero-mobil" src="images/hero.png" alt="hero-billede der passer til telefon">
+
+            <!-- billede skal vises på computer -->
+            <img class="hero-computer" src="images/hero-computer.png" alt="hero-billede der passer til computer">
+        </section>
+
+        <!-- DE FIRE BILLEDER fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
+        <section class="billeder">
+
+            <!-- her laver vi billedegruppe og højre/venstre inddeling, fordi vi både skal centere alle billederne og de skal være skiftevis højre og venstre -->
+            <!-- Her ligger det første billeder der viser "10 dages batteri" -->
+            <div class="billedegruppe hoejre-billede">
+                <!-- Her er selve billedet sat ind -->
+                <img src="images/batteri.png" alt="mand med armbånd med 10 dages batteri">
+
+                <div class="billede-tekst">
+                    <!-- Her er "overskrift"-->
+                    <h1>10 DAGES BATTERI</h1>
+                    <!-- Her er "uddybende tekst"-->
+                    <h4>Følg din sundhed og aktivitet i op til 10 dage på én opladning. Den lange batteritid giver dig sammenhængende målinger af blandt andet søvn, puls, stress og bevægelse – uden at armbåndet hele tiden skal oplades. Dine resultater kan altid ses i PULSE-appen.</h4>
+                </div>
+                
+            </div>
+
+            <!-- Her ligger det andet billede af "søvn" -->
+            <div class="billedegruppe venstre-billede">
+                <!-- Her ligget selve billedet -->
+                <img src="images/søvn.png" alt="mand der sover med armbånd">
+
+                <div class="billede-tekst">
+                    <h1>SØVN</h1>
+                    <!-- Her er "uddybende tekst"-->
+                    <h4>Få et detaljeret overblik over din søvn og restitution hver nat. PULSE-armbåndet registrerer blandt andet dine søvnfaser, din puls, dit stressniveau og din vejrtrækning, så du bedre kan forstå din søvnkvalitet. Alle dine søvndata samles i PULSE-appen og hjælper dig med at skabe bedre søvnvaner.</h4>
+                </div>
+
+            </div>
+
+
+            <!-- Her ligger det tredje billede af "træning" -->
+            <div class="billedegruppe hoejre-billede">
+                <!-- Her ligget selve billedet -->
+                <img src="images/træning.png" alt="mand der løber med armbånd på">
+
+                <div class="billede-tekst">
+                    <h1>TRÆNING</h1>
+                    <!-- Her er "uddybende tekst"-->
+                    <h4>Få et samlet overblik over din træning og udvikling. PULSE-armbåndet registrerer dine aktiviteter og hjælper dig med at følge blandt andet intensitet, kondition, kalorieforbrænding og restitution. I PULSE-appen kan du se dine resultater, følge dine fremskridt og arbejde målrettet mod dine træningsmål.</h4>
+                </div>
+                
+            </div>
+
+             <!-- Her ligger det fjerde billede af "sundhed" -->
+            <div class="billedegruppe venstre-billede">
+                <!-- Her ligget selve billedet -->
+                <img src="images/sundhed.png" alt="mand der mediterer">
+
+                <div class="billede-tekst">
+                    <!-- Her er "overskrift"-->
+                    <h1>SUNDHED</h1>
+                    <!-- Her er "uddybende tekst"-->
+                    <h4>Få et komplet overblik over din sundhed og energi døgnet rundt. PULSE-armbåndet måler blandt andet puls, iltmætning, stress og aktivitetsniveau, så du nemt kan følge kroppens udvikling. Alle dine målinger samles og synkroniseres automatisk i PULSE-appen.</h4>
+                </div>
+                
+            </div>
+
+        </section>
+
+        <!-- PRODUKTGALLERIET LIGE OVER PRODUKTBESKRIVELSEN OG FOOTEREN -->
+        <section class="produktgalleri">
             
             <!-- Det første billede -->
             <!-- id bruges som destination for pilenes links -->
@@ -163,57 +241,6 @@
 
          </section>
 
-        <!-- DE FIRE BILLEDER fra chat ligger her, hvor teksten er en "knap" der kan hover og gøre cusor til pointer-->
-        <section class="billeder">
-            
-            <!-- Her ligger det første billeder der viser "10 dages batteri" -->
-            <div class="batteri">
-                <!-- Her er selve billedet sat ind -->
-                <img src="images/batteri.png" alt="mand med armbånd med 10 dages batteri">
-
-                <!-- Her er "tekst-knappen"-->
-                <button type="button" class="batteri-billedetekst">
-                    10 dages batteri
-                </button>
-            </div>
-
-
-            <!-- Her ligger det andet billede af "søvn" -->
-            <div class="søvn">
-                <!-- Her ligget selve billedet -->
-                <img src="images/søvn.png" alt="mand der sover med armbånd">
-
-                <!-- Her er "tekst-knappen" -->
-                <button type="button" class="søvn-billedetekst">
-                    Søvn
-                </button>
-            </div>
-
-
-            <!-- Her ligger det tredje billede af "træning" -->
-            <div class="træning">
-                <!-- Her ligget selve billedet -->
-                <img src="images/træning.png" alt="mand der løber med armbånd på">
-
-            <!-- Her er "tekst-knappen" -->
-             <button type="button" class="træning-billedetekst">
-                Træning
-             </button>
-             </div>
-
-
-             <!-- Her ligger det fjerde billede af "sundhed" -->
-            <div class="sundhed">
-                <!-- Her ligget selve billedet -->
-                <img src="images/sundhed.png" alt="mand der mediterer">
-
-                <!-- Her er "tekst-knappen" -->
-                 <button type="button" class="sundhed-billedetekst">
-                    Sundhed
-                 </button>
-            </div>
-
-        </section>
     </main>
 
     <footer>
@@ -221,7 +248,7 @@
         <!-- her er de tre knapper i en gruppe -->
         <div class="footer-knapper">
             <!-- Kundeservice -->
-            <button type="button" class="Kundeservice-knap">Kundeservice</button>
+            <button type="button" class="kundeservice-knap">Kundeservice</button>
 
             <!-- Om os -->
             <button type="button" class="om-os-knap">Om os</button>

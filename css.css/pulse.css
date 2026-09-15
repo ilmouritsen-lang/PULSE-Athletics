@@ -1,14 +1,25 @@
+@font-face {
+    font-family: "Hanken Grotesk Light";
+    src: url(../fonts/HankenGrotesk-Light.ttf);
+}
+
+@font-face {
+    font-family: "Hanken Grotesk Thin";
+    src: url(../fonts/HankenGrotesk-Thin.ttf);
+}
 
 :root {
-    --tekstfarve: black;
+    --font-light: "Hanken Grotesk Light", sans-serif;
+    --font-thin: "Hanken Grotesk Thin", sans-serif;
+    --tekstfarve: white;
     --kæmpe-overskrift: 40px;
     --stor-overskrift: 35px;
-    --lille-overskrift: 28px;
+    --lille-overskrift: 20px;
     --rubrikker: 12px;
 }
 
 body {
-    background-color: rgb(241, 236, 236);
+    background-color: rgb(54, 53, 53);
     margin: 0;
 }
 
@@ -27,48 +38,246 @@ header {
     top: 0;
     /* gør så den ligger foran sidens indhold */
     z-index: 10;
+
 }
 
 /* Gør at logo er i en bestemt størrelse */
 .pulse-logo-oeverst img{
-    width: 8rem;
+    width: 128px;
     height: auto;
 }
 
 /* Gør at ikonerne er i en bestemt størrelse */
 .ikoner-oeverst img {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
+
+    /* Gør animationen blød */
+    transition: transform 0.2s;
+}
+
+/* Det ikon, musen er over, bliver større */
+.ikoner-oeverst img:hover {
+    transform: scale(1.1);
 }
 
 /* laver en boks omkring ikonerne */
 .ikoner-oeverst {
-   background-color: lightblue; 
-   padding: 0.2rem;
-   border-radius: 2rem;
+   background-color: white; 
+   padding: 3px;
+   border-radius: 32px;
 }
 
 /* Gør at søgeikonet er lidt væk fra de andre ikoner */
 .soegeikon {
-    margin-right: 4rem;
+    margin-right: 64px;
+}
+
+/* HEADER - MOBIL */
+@media screen and (max-width: 699px) {
+    
+    header {
+        padding: 8px 12px;
+    }
+
+    .pulse-logo-oeverst img {
+        width: 84px;
+        height: auto;
+    }
+
+    .ikoner-oeverst img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .soegeikon {
+        margin-right: 32px;
+    }
 }
 
 /* MAIN */
-/* HEROSEKTION I TOPPEN */
+
+/* HERO SEKTIONEN */
+
+/* FÆLLES STYLING AF BILLEDERNE */
+.hero-billede img {
+    /* breden er 100% */
+    width: 100%;
+    /* højden skal bare passe til den der aoutomatisk er så den ikke strækkes */
+    height: auto;
+    /* fjerner mellemrum under billedet */
+    display: block;
+}
+
+/* MOBILVERSION */
+/* Mobil version vises som standard */
+.hero-billede .hero-mobil {
+    display: block;
+}
+
+/* skjuler computerversion når mobilversion bliver brugt */
+.hero-billede .hero-computer {
+    display: none;
+}
+
+/* COMPUTERVERSION */
+/* Glæder fra 700px og op efter */
+@media only screen and (min-width: 700px) {
+    
+    /* skjul mobilversion */
+    .hero-billede .hero-mobil {
+        display: none;
+    }
+
+    /* vis computerversion */
+    .hero-billede .hero-computer {
+        display: block;
+    }
+}
+
+
+/* BILLEDER AF MÆNDENE */
+
+/*
+   .billeder er den store beholder omkring alle fire billedgrupper.
+   Den bestemmer, hvordan grupperne placeres i forhold til hinanden.
+*/
+.billeder {
+    /* Aktiverer flexbox, så vi kan styre retningen på elementerne. */
+    display: flex;
+
+    /* Placerer de fire billedgrupper under hinanden i stedet for på samme række. */
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*
+   Denne class sidder på hver enkelt gruppe, fx Batteri eller Søvn.
+   Gruppen indeholder både billedet, overskriften og den uddybende tekst.
+*/
+.billedegruppe {
+    /* Placerer gruppens indhold ved siden af hinanden på en vandret række. */
+    display: flex;
+
+    /* Får billedet og tekstfeltet til at fylde den samme højde. */
+    align-items: stretch;
+}
+
+/* Bruges på de grupper, hvor billedet skal stå i venstre side. */
+.venstre-billede {
+    /* Normal rækkefølge: det første HTML-element står længst til venstre. */
+    flex-direction: row;
+}
+
+/* Bruges på de grupper, hvor billedet skal stå i højre side. */
+.hoejre-billede {
+    /* Vender rækkefølgen, så det første HTML-element flyttes mod højre. */
+    flex-direction: row-reverse;
+}
+
+/* Rammer alle billeder, som ligger inde i elementet med class="billeder". */
+.billeder img {
+    /* Billedet får 60 % af billedgruppens bredde. */
+    width: 60%;
+
+    /* Giver alle fire billeder det samme forhold mellem bredde og højde. */
+    aspect-ratio: 3 / 2;
+
+    /* Beskærer billedet, så det udfylder formatet uden at blive strakt. */
+    object-fit: cover;
+
+    /* Fjerner browserens lille standardmellemrum under billeder. */
+    display: block;
+}
+
+.billede-tekst {
+    /* Tekstfeltet bruger de resterende 40 % ved siden af billedet. */
+    width: 40%;
+
+    /* Sørger for, at padding er inkluderet i tekstfeltets bredde. */
+    box-sizing: border-box;
+
+    /* Skaber luft omkring både overskriften og den uddybende tekst. */
+    padding: 60px;
+}
+
+/* Fjerner browserens standardmargener, så afstanden bliver ens i alle grupper. */
+.billeder h1,
+.billeder h4 {
+    margin: 0;
+}
+
+/* Styling, der kun gælder billedgruppernes overskrifter. */
+.billeder h1 {
+    /* Henter tekstfarven fra variablen --tekstfarve øverst i CSS-filen. */
+    color: var(--tekstfarve);
+
+    /* Henter overskriftens størrelse fra variablen --stor-overskrift. */
+    font-size: var(--stor-overskrift);
+
+    /* Bruger den tynde Hanken Grotesk-skrifttype, som er defineret øverst. */
+    font-family: var(--font-light);
+
+    /* Gør selve skrifttypens streg meget tynd. */
+    font-weight: 100;
+
+    /* Laver en ensartet afstand ned til den uddybende tekst. */
+    margin-bottom: 20px;
+}
+
+/* Styling, der kun gælder den uddybende tekst under overskrifterne. */
+.billeder h4 {
+    /* Bruger den samme fælles tekstfarve som overskriften. */
+    color: var(--tekstfarve);
+
+    /* Bruger den mindre skriftstørrelse fra variablen --rubrikker. */
+    font-size: var(--lille-overskrift);
+
+    /* Bruger den samme tynde Hanken Grotesk-skrifttype. */
+    font-family: var(--font-thin);
+
+    /* Gør også denne tekst meget tynd. */
+    font-weight: 100;
+}
+
+/* BILLEDERNE AF MÆND - MOBIL */
+
+@media screen and (max-width: 699px) {
+    .venstre-billede,
+    .hoejre-billede {
+        flex-direction: column;
+    }
+
+    .billeder img {
+        width: 100%;
+    }
+
+    .billede-tekst {
+        width: 100%;
+    }
+}
+
+/* PRODUKTGALLERI */
 
 /* Hele området, hvor billederne bliver vist */
-.hero {
-    /* gør at billederne ligger ved siden af hinanden */
+.produktgalleri {
+    /* Lægger alle slides på én vandret række. */
     display: flex;
-    /* bestemmer bredet på billederne */
+
+    /* Giver det synlige galleri en bredde på 800 pixels på store skærme. */
     width: 800px;
-    /* Forhindrer heroen i at blive bredere end skærmen */
+
+    /* Forhindrer galleriet i at blive bredere end skærmen på mindre enheder. */
     max-width: 100%;
-    /* Centrerer hele hero-sektionen vandret */
+
+    /* 0 giver ingen lodret margin, og auto centrerer galleriet vandret. */
     margin: 0 auto;
-    /* skjuler de biller der ligger rundt om så der kun bliver vist en ad gangen */
+    margin-top: 100px;
+
+    /* Skjuler de slides, som befinder sig uden for det synlige galleri. */
     overflow: hidden;
-    /* gør overgangen når man trykker på pilene mere flydende */
+
+    /* Får browseren til at rulle blødt hen til det valgte slide-link. */
     scroll-behavior: smooth;
 }
 
@@ -76,7 +285,7 @@ header {
 .slide {
     /* gør at man kan placere pilene oven på billederne */
     position: relative;
-    /* gør at billederne fylder min hele "hero" ud */
+    /* gør at billederne fylder hele produktgalleriet ud */
     min-width: 100%;
 }
 
@@ -129,35 +338,43 @@ header {
 .produktbeskrivelse h1 {
     color: var(--tekstfarve);
     font-size: var(--kæmpe-overskrift);
+    font-family: var(--font-thin);
+    font-weight: 100;
 }
 
 .produktbeskrivelse h2 {
     color: var(--tekstfarve);
     font-size: var(--stor-overskrift);
+    font-family: var(--font-thin);
+    font-weight: 100;
 }
 
 .produktbeskrivelse h4 {
     color: var(--tekstfarve);
     font-size: var(--lille-overskrift);
+    font-family: var(--font-thin);
+    font-weight: 100;
 }
 
 .produktbeskrivelse h6 {
     color: var(--tekstfarve);
     font-size: var(--rubrikker);
+    font-family: var(--font-thin);
+    font-weight: 100;
 }
 
 .produktbeskrivelse img {
-    width: 10rem;
+    width: 160px;
     height: auto;
 }
 
 /* her er boksen til størrelser */
 .boks-one-size {
-    width: 6rem;
-    height: 2rem;
+    width: 96px;
+    height: 32px;
     /* kant rundt om knappen */
-    border: 2px solid black;
-    color: black;
+    border: 2px solid white;
+    color: white;
     font-size: var(--rubrikker);
 
     /* gør man kan centere i de to næste */
@@ -194,8 +411,8 @@ header {
     .cirkel-sort,
     .cirkel-blå,
     .cirkel-grøn {
-        width: 2rem;
-        height: 2rem;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
 
         transition: scale 0.2s;
@@ -219,10 +436,10 @@ header {
 
 /* her er køb-knappen */
 .kurv-knap {
-    width: 10rem;
-    height: 3rem;
+    width: 160px;
+    height: 48px;
     background-color: navy;
-    border: 2px solid black;
+    border: none;
     font-size: var(--rubrikker);
     color: white;
 
@@ -252,53 +469,7 @@ header {
         margin: 0;
     }
 
-/* BILLEDER AF MÆNDENE */
-.billeder {
-    display: flex;
-    /* Lægger billederne direkte under hinanden uden mellemrum */
-    flex-direction: column;
-}
-
-.billeder img {
-    width: 100%;
-    height: auto;
-}
-
-.billeder > div {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.billeder button {
-    /* placerer teksten ovenpå billedet */
-    position: absolute;
-    /* bestemmer afstand til venstreside */
-    left: 30px;
-
-    background: transparent;
-    border: none;
-    font-size: 100px;
-    color: white;
-
-    /* gør at musen bliver til en trykmus */
-    cursor: pointer;
-    /* gør hover effekten tager x antal sekunder */
-    transition: 0.2s;
-}
-
-/* her laver vi hover effekt */
-.billeder button:hover {
-    /* 1 er den størrelse den er nu så 1.05 gør den bliver større når cursoren er på */
-    scale: 1.05;
-}
-
-/* der skal være mellemrum over det første billede */
-.batteri {
-    margin-top: 100px;
-}
-
-/* FOOTER (hover) */
+/* FOOTER */
 footer {
     margin-top: 30px;
     background-color: black;
@@ -315,7 +486,7 @@ footer {
 }
 
 .footer-knapper {
-    width: 30rem;
+    width: 480px;
     max-width: 100%;
 
     display: flex;
@@ -323,6 +494,13 @@ footer {
     align-items: flex-start;
 
     gap: 20px; 
+}
+
+.kundeservice-knap:hover,
+.om-os-knap:hover,
+.retur-reklamation-knap:hover {
+    scale: 1.02;
+    cursor: pointer;
 }
 
 /* LOGOER TIL SOCIALE MEDIER */
@@ -336,6 +514,23 @@ footer {
 .sociale-medier img {
     /* fjerner den ekstra plads under billeder */
     display: block;
-    width: 6rem;
-    height: 6rem;
+    width: 96px;
+    height: 96px;
+}
+
+.instagram:hover,
+.facebook:hover,
+.linkedin:hover {
+    scale: 1.02;
+    cursor: pointer;
+}
+
+/* FOOTER - MOBIL */
+@media screen and (max-width: 699px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+    }
 }
