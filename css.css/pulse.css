@@ -16,6 +16,7 @@
     --stor-overskrift: 35px;
     --lille-overskrift: 18px;
     --rubrikker: 12px;
+    --blå-knap-farve:rgb(39, 134, 202);
 }
 
 body {
@@ -140,7 +141,7 @@ header {
     height: 40px;
     margin-top: 10px;
 
-    background-color: rgb(66, 133, 197);
+    background-color: var(--blå-knap-farve);
     border: 2px solid white;
     border-radius: 30px;
 
@@ -362,6 +363,43 @@ header {
     }
 }
 
+/* APPEN */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.app h1 {
+    font-family: var(--font-thin);
+    font-size: var(--kæmpe-overskrift);
+    font-weight: 300;
+    color: white;
+}
+
+.app img {
+    display: block;
+    max-width: 100%;
+    width: 1200px;
+    height: auto;
+}
+
+.app strong {
+    font-weight: 900;
+} 
+
+/* APPEN - MOBIL */
+@media screen and (max-width: 699px) {
+    .app img {
+        width: 450px;
+    }
+
+    .app h1 {
+        font-size: var(--lille-overskrift);
+    }
+}
+
 /* PRODUKTGALLERI */
 
 /* Hele området, hvor billederne bliver vist */
@@ -543,7 +581,7 @@ header {
 .kurv-knap {
     width: 160px;
     height: 48px;
-    background-color: rgb(1, 1, 93);
+    background-color: var(--blå-knap-farve);
     border: 2px solid white;
     font-size: var(--rubrikker);
     color: white;
