@@ -303,6 +303,65 @@ header {
     }
 }
 
+/* ANMELDELSER FRA TRUSTPILOT */
+.anmeldelser {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 30px 150px;
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.anmeldelser h1 {
+    font-family: var(--font-light);
+    font-weight: 300;
+    font-size: var(--kæmpe-overskrift);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anmeldelser img {
+    width: 450px;
+    height: auto;
+
+    display: block;
+}
+
+.bedre-søvn,
+.hverdag {
+    align-self: flex-end;
+}
+
+.godt-overblik {
+    align-self: flex-start;
+}
+
+/* ANMELDELSER - MOBIL */
+@media screen and (max-width: 699px) {
+    .anmeldelser {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .anmeldelser h1 {
+        font-size: var(--lille-overskrift);
+    }
+
+    .anmeldelser img {
+        width: 300px;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
 /* PRODUKTGALLERI */
 
 /* Hele området, hvor billederne bliver vist */
