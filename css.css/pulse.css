@@ -19,7 +19,11 @@
 }
 
 body {
-    background-color: rgb(12, 30, 85);
+    
+    background-image: url("../images/blåbaggrund.png");
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat:repeat-y;
     margin: 0;
 }
 
@@ -136,7 +140,7 @@ header {
     height: 40px;
     margin-top: 10px;
 
-    background-color: transparent;
+    background-color: rgb(66, 133, 197);
     border: 2px solid white;
     border-radius: 30px;
 
