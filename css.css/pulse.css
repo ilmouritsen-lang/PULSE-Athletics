@@ -347,6 +347,7 @@ header {
     .anmeldelser {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 30px;
     }
 
@@ -355,7 +356,8 @@ header {
     }
 
     .anmeldelser img {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: auto;
 
         display: flex;
