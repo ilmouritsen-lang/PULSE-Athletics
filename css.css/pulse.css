@@ -16,7 +16,7 @@
     --stor-overskrift: 35px;
     --lille-overskrift: 18px;
     --rubrikker: 12px;
-    --blå-knap-farve:rgb(39, 134, 202);
+    --blaa-knap-farve:rgb(39, 134, 202);
 }
 
 body {
@@ -141,7 +141,7 @@ header {
     height: 40px;
     margin-top: 10px;
 
-    background-color: var(--blå-knap-farve);
+    background-color: var(--blaa-knap-farve);
     border: 2px solid white;
     border-radius: 30px;
 
@@ -544,16 +544,16 @@ header {
 
     /* skaber en hover effekt over alle cirklerne */
     .cirkel-sort:hover,
-    .cirkel-blå:hover,
-    .cirkel-grøn:hover {
+    .cirkel-blaa:hover,
+    .cirkel-groen:hover {
         /* cirklerne er normalt 1 og når de så hover til 1.05 bliver de lidt større */
         scale: 1.05;
     }
 
     /* Fælles størrelse og runding står kun én gang, fordi alle tre cirkler bruger det samme. */
     .cirkel-sort,
-    .cirkel-blå,
-    .cirkel-grøn {
+    .cirkel-blaa,
+    .cirkel-groen {
         width: 32px;
         height: 32px;
         border-radius: 50%;
@@ -567,12 +567,12 @@ header {
         background-color: black;
     }
 
-    .cirkel-blå {
+    .cirkel-blaa {
         border: 2px solid white;
         background-color: navy;
     }
 
-    .cirkel-grøn {
+    .cirkel-groen {
         border: 2px solid white;
         background-color:darkgreen;
     }
