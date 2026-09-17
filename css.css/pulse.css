@@ -84,7 +84,7 @@ header {
 @media screen and (max-width: 699px) {
     
     header {
-        /* luft øverst og nederst samt siderne */
+        /* mindre skærm så ændre luft øverst og nederst samt siderne */
         padding: 8px 12px;
     }
 
