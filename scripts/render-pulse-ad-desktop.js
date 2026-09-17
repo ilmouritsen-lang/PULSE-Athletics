@@ -30,10 +30,10 @@ const textFront = Buffer.from(`
 <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
   ${fontFace}
   <text x="430" y="510" text-anchor="middle"
-    font-family="Hanken Grotesk" font-size="58" font-weight="500" fill="#FFFFFF">Hvert skridt taeller</text>
+    font-family="Hanken Grotesk" font-size="58" font-weight="500" fill="#FFFFFF">Hvert skridt tæller</text>
   <rect x="270" y="570" width="320" height="82" rx="41" fill="${brightBlue}"/>
   <text x="430" y="625" text-anchor="middle"
-    font-family="Hanken Grotesk" font-size="36" font-weight="700" fill="#FFFFFF">Koeb nu</text>
+    font-family="Hanken Grotesk" font-size="36" font-weight="700" fill="#FFFFFF">Køb nu</text>
   <text x="430" y="745" text-anchor="middle"
     font-family="Hanken Grotesk" font-size="54" font-weight="500" fill="#FFFFFF">1.299 kr.</text>
 </svg>`);

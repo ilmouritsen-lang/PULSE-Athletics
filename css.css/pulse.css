@@ -12,7 +12,7 @@
     --font-light: "Hanken Grotesk Light", sans-serif;
     --font-thin: "Hanken Grotesk Thin", sans-serif;
     --tekstfarve: white;
-    --kæmpe-overskrift: 40px;
+    --kaempe-overskrift: 40px;
     --stor-overskrift: 35px;
     --lille-overskrift: 18px;
     --rubrikker: 12px;
@@ -21,7 +21,7 @@
 
 body {
     
-    background-image: url("../images/blåbaggrund.png");
+    background-image: url("../images/blaabaggrund.png");
     background-size: 100% auto;
     background-position: center;
     background-repeat:repeat-y;
@@ -131,7 +131,7 @@ header {
     display: none;
 }
 
-.køb-nu-knap {
+.koeb-nu-knap {
     /* placerer knappen ovenpå billedet */
     position: absolute;
     /* centrerer knappen præcist omkring placeringen. */
@@ -153,7 +153,7 @@ header {
     top: 88%;
 }
 
-.køb-nu-knap:hover {
+.koeb-nu-knap:hover {
     cursor: pointer;
     scale: 1.05;
 }
@@ -172,7 +172,7 @@ header {
         display: block;
     }
 
-    .køb-nu-knap {
+    .koeb-nu-knap {
         left: 22.4%;
         top: 56.5%;
 
@@ -318,7 +318,7 @@ header {
 .anmeldelser h1 {
     font-family: var(--font-light);
     font-weight: 300;
-    font-size: var(--kæmpe-overskrift);
+    font-size: var(--kaempe-overskrift);
     color: white;
 
     display: flex;
@@ -333,7 +333,7 @@ header {
     display: block;
 }
 
-.bedre-søvn,
+.bedre-soevn,
 .hverdag {
     align-self: flex-end;
 }
@@ -373,7 +373,7 @@ header {
 
 .app h1 {
     font-family: var(--font-thin);
-    font-size: var(--kæmpe-overskrift);
+    font-size: var(--kaempe-overskrift);
     font-weight: 300;
     color: white;
 }
@@ -480,7 +480,7 @@ header {
 /* ALT TEKST I PRODUKTBESKRIVELSEN ER SAMLET HER UNDER */
 .produktbeskrivelse h1 {
     color: var(--tekstfarve);
-    font-size: var(--kæmpe-overskrift);
+    font-size: var(--kaempe-overskrift);
     font-family: var(--font-thin);
     font-weight: 100;
 }
@@ -581,7 +581,7 @@ header {
 .kurv-knap {
     width: 160px;
     height: 48px;
-    background-color: var(--blå-knap-farve);
+    background-color: var(--blaa-knap-farve);
     border: 2px solid white;
     font-size: var(--rubrikker);
     color: white;
