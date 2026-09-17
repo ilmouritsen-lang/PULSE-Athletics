@@ -34,7 +34,7 @@ header {
     display: flex;
     /* lægger den ledige plads mellem dem, så logoet står til venstre og ikonerne til højre. */
     justify-content: space-between;
-    /* - centrerer dem lodret, så de flugter på midten, selvom logoet er højere end ikonerne. */
+    /*  centrerer dem lodret, så de flugter på midten, selvom logoet er højere end ikonerne. */
     align-items: center;
 
     /* får headeren til at følge med, når man scroller */
@@ -69,7 +69,9 @@ header {
 /* laver en boks omkring ikonerne */
 .ikoner-oeverst {
    background-color: white; 
+   /* Laver 3 pixels luft mellem ikonerne og kanten af baggrund */
    padding: 3px;
+   /* Afrunder hjørnerne med 32 pixels */
    border-radius: 32px;
 }
 
@@ -82,20 +84,24 @@ header {
 @media screen and (max-width: 699px) {
     
     header {
+        /* luft øverst og nederst samt siderne */
         padding: 8px 12px;
     }
 
     .pulse-logo-oeverst img {
+        /* logo mindre */
         width: 84px;
         height: auto;
     }
 
     .ikoner-oeverst img {
+        /* ikoner mindre */
         width: 28px;
         height: 28px;
     }
 
     .soegeikon {
+        /* mindre mellemrum */
         margin-right: 32px;
     }
 }
